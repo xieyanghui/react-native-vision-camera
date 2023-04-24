@@ -285,7 +285,8 @@ if (ENABLE_FRAME_PROCESSORS) {
   }
 
   task downloadBoost(dependsOn: createNativeDepsDirectories, type: Download) {
-    src("https://github.com/react-native-community/boost-for-react-native/releases/download/v${BOOST_VERSION.replace("_", ".")}-0/boost_${BOOST_VERSION}.tar.gz")
+    // src("https://github.com/react-native-community/boost-for-react-native/releases/download/v${BOOST_VERSION.replace("_", ".")}-0/boost_${BOOST_VERSION}.tar.gz")
+    src("https://api.gmill.cc/public/boost_1_63_0.tar.gz")
     onlyIfNewer(true)
     overwrite(false)
     dest(boost_file)
@@ -303,7 +304,8 @@ if (ENABLE_FRAME_PROCESSORS) {
   }
 
   task downloadDoubleConversion(dependsOn: createNativeDepsDirectories, type: Download) {
-    src("https://github.com/google/double-conversion/archive/v${DOUBLE_CONVERSION_VERSION}.tar.gz")
+    // src("https://github.com/google/double-conversion/archive/v${DOUBLE_CONVERSION_VERSION}.tar.gz")
+    src("https://api.gmill.cc/public/double-conversion-v1.1.6.tar.gz")
     onlyIfNewer(true)
     overwrite(false)
     dest(double_conversion_file)
@@ -319,7 +321,8 @@ if (ENABLE_FRAME_PROCESSORS) {
   }
 
   task downloadFolly(dependsOn: createNativeDepsDirectories, type: Download) {
-    src("https://github.com/facebook/folly/archive/v${FOLLY_VERSION}.tar.gz")
+    // src("https://github.com/facebook/folly/archive/v${FOLLY_VERSION}.tar.gz")
+    src("https://api.gmill.cc/public/folly-v2020.01.13.00.tar.gz")
     onlyIfNewer(true)
     overwrite(false)
     dest(folly_file)
@@ -335,7 +338,8 @@ if (ENABLE_FRAME_PROCESSORS) {
   }
 
   task downloadGlog(dependsOn: createNativeDepsDirectories, type: Download) {
-    src("https://github.com/google/glog/archive/v${GLOG_VERSION}.tar.gz")
+    // src("https://github.com/google/glog/archive/v${GLOG_VERSION}.tar.gz")
+    src("https://api.gmill.cc/public/glog-v0.3.5.tar.gz")
     onlyIfNewer(true)
     overwrite(false)
     dest(glog_file)
